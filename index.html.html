@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Areesha Aamir — Software Engineering Student portfolio">
+<title>Areesha Aamir | Software Engineering Student</title>
+<style>
+:root{--bg:#0c0b14;--panel:#151421;--panel2:#1b1929;--text:#f7f3ff;--muted:#b8b3c9;--pink:#ff75bb;--purple:#a78bfa;--line:rgba(255,255,255,.11);--glow:rgba(167,139,250,.18)}
+*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:radial-gradient(ellipse at 15% 0%,#211632 0,transparent 38%),radial-gradient(ellipse at 90% 30%,#191e3a 0,transparent 35%),var(--bg);color:var(--text);line-height:1.65}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,88%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:rgba(12,11,20,.86);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{font-weight:800;font-size:1.18rem;letter-spacing:-.04em}.brand span{color:var(--pink)}
+nav{display:flex;gap:26px;align-items:center}nav a{font-size:.91rem;color:var(--muted);transition:.2s}nav a:hover{color:var(--pink)}
+.menu{display:none;background:none;border:1px solid var(--line);color:white;border-radius:9px;padding:7px 10px;font-size:1.1rem}
+.hero{padding:95px 0 90px;min-height:590px;display:flex;align-items:center}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:60px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:#e6caff;background:rgba(167,139,250,.11);border:1px solid rgba(167,139,250,.28);border-radius:999px;padding:7px 13px;font-size:.82rem;margin-bottom:24px}
+.dot{width:7px;height:7px;background:#70e1b3;border-radius:50%;box-shadow:0 0 12px #70e1b3}
+h1{font-size:clamp(2.7rem,6vw,5rem);line-height:1.05;letter-spacing:-.065em;margin-bottom:18px}h1 .gradient{background:linear-gradient(90deg,var(--pink),#c4a7ff 75%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.subtitle{font-size:1.25rem;color:#d7c6ee;font-weight:600;margin-bottom:14px}.intro{max-width:620px;color:var(--muted);font-size:1.04rem}
+.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border-radius:12px;font-weight:700;font-size:.94rem;border:1px solid var(--line);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-3px)}.btn-primary{background:linear-gradient(100deg,#ff75bb,#a78bfa);color:#17101f;border:0;box-shadow:0 8px 28px rgba(255,117,187,.16)}.btn-ghost{background:rgba(255,255,255,.035)}
+.profile-card{position:relative;border:1px solid rgba(255,255,255,.13);border-radius:28px;padding:28px;background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.018));box-shadow:0 25px 80px rgba(0,0,0,.28);overflow:hidden}
+.profile-card:before{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:var(--glow);filter:blur(5px);top:-95px;right:-80px}
+.avatar{position:relative;width:100%;aspect-ratio:1/1.05;border-radius:20px;background:linear-gradient(145deg,#37244b,#242544 55%,#39233d);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.avatar:before,.avatar:after{content:"";position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.15);width:220px;height:220px}
+.avatar:after{width:290px;height:290px}
+.avatar-mark{font-size:6.5rem;font-weight:900;letter-spacing:-.1em;background:linear-gradient(140deg,#ffd0e9,#b9a5ff);-webkit-background-clip:text;background-clip:text;color:transparent;z-index:1}
+.profile-caption{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:18px}.profile-caption strong{display:block}.profile-caption small{color:var(--muted)}.pill{border:1px solid rgba(255,117,187,.3);background:rgba(255,117,187,.08);color:#ffb5db;border-radius:99px;padding:5px 10px;font-size:.76rem;white-space:nowrap}
+.tech-strip{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}.tech{padding:8px 12px;border-radius:9px;background:rgba(255,255,255,.04);border:1px solid var(--line);font-size:.84rem;color:#d6cde5}
+section{padding:82px 0}.section-head{text-align:center;max-width:700px;margin:0 auto 42px}.kicker{text-transform:uppercase;letter-spacing:.16em;font-size:.76rem;color:var(--pink);font-weight:800}.section-head h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.05em;margin:8px 0 10px}.section-head p{color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:22px}.panel{background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.018));border:1px solid var(--line);border-radius:20px;padding:27px}.panel h3{font-size:1.15rem;margin-bottom:12px}.panel p{color:var(--muted)}
+.mini-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:20px}.mini{background:rgba(255,255,255,.035);border:1px solid var(--line);border-radius:13px;padding:15px}.mini b{display:block;margin-bottom:3px}.mini span{font-size:.86rem;color:var(--muted)}
+.interests{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}.tag{font-size:.82rem;color:#e2d7f5;background:rgba(167,139,250,.09);border:1px solid rgba(167,139,250,.2);padding:6px 10px;border-radius:8px}
+.skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.skill-card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px}.skill-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(140deg,rgba(255,117,187,.18),rgba(167,139,250,.2));font-size:1.25rem;margin-bottom:14px}.skill-card h3{margin-bottom:12px}.skill-line{display:flex;justify-content:space-between;gap:10px;font-size:.87rem;margin-top:11px}.skill-line span:first-child{color:#e6e0f0}.level{color:var(--muted);font-size:.78rem}
+.projects{background:linear-gradient(180deg,transparent,rgba(167,139,250,.045),transparent)}
+.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.project-card{border:1px solid var(--line);border-radius:19px;background:var(--panel);overflow:hidden;transition:transform .25s,border-color .25s}.project-card:hover{transform:translateY(-5px);border-color:rgba(255,117,187,.45)}
+.preview{height:220px;background:#10101b;padding:17px;overflow:hidden;border-bottom:1px solid var(--line)}
+.browser{height:100%;border:1px solid rgba(255,255,255,.13);border-radius:10px;background:#171625;overflow:hidden}
+.browser-bar{height:22px;background:#242234;display:flex;align-items:center;gap:4px;padding:0 9px}.browser-bar i{height:5px;width:5px;background:#a49bb9;border-radius:50%}
+.mock-portfolio{padding:14px;background:linear-gradient(135deg,#17142a,#24203a);height:100%;font-size:.65rem}.mock-title{font-size:1.05rem;font-weight:800;margin:22px 0 4px}.mock-title span{color:var(--pink)}.mock-button{display:inline-block;margin-top:10px;padding:5px 9px;background:#e77eb6;color:#231326;border-radius:5px;font-weight:800}
+.mock-salon{height:100%;padding:14px;background:#fff5f8;color:#503340;font-size:.65rem}.salon-logo{font-size:.75rem;font-weight:900;color:#b64f79}.salon-hero{margin-top:13px;padding:17px 9px;text-align:center;background:linear-gradient(120deg,#f7d6e5,#fff1f6);font-size:.95rem;font-weight:800}.salon-cards{display:flex;gap:6px;margin-top:10px}.salon-cards span{flex:1;background:white;padding:10px 3px;text-align:center;border-radius:5px}
+.mock-db{padding:13px;height:100%;background:#111925;font-family:monospace;font-size:.65rem;color:#b8d6ff}.db-label{font-size:.85rem;color:#fff;margin-bottom:8px}.db-row{display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:1px solid #35445b;padding:7px 3px}.db-code{margin-top:10px;color:#93d7bd;line-height:1.5}
+.project-body{padding:22px}.project-type{font-size:.73rem;color:var(--pink);font-weight:800;letter-spacing:.08em;text-transform:uppercase}.project-body h3{font-size:1.2rem;margin:5px 0 9px}.project-body p{font-size:.91rem;color:var(--muted)}.project-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:15px}.project-tags span{font-size:.74rem;background:rgba(255,255,255,.05);border:1px solid var(--line);padding:4px 8px;border-radius:7px}.project-link{display:inline-block;margin-top:17px;color:#ffadd6;font-size:.88rem;font-weight:700}
+.certificate{display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:center}.cert-icon{width:58px;height:58px;border-radius:16px;background:linear-gradient(140deg,rgba(255,117,187,.2),rgba(167,139,250,.2));display:grid;place-items:center;font-size:1.6rem}.certificate p{color:var(--muted)}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:20px}.contact-item{padding:16px 0;border-bottom:1px solid var(--line)}.contact-item:last-child{border:0}.contact-item small{color:var(--muted);display:block}.contact-item a{color:#ffadd6}.socials{display:flex;flex-wrap:wrap;gap:10px;margin-top:17px}.socials a{border:1px solid var(--line);padding:8px 12px;border-radius:9px;color:#e8def5;font-size:.86rem}
+form{display:grid;gap:14px}label{display:block;font-size:.86rem;color:#ded6ea;margin-bottom:6px}input,textarea{width:100%;background:#100f1a;border:1px solid var(--line);color:white;border-radius:10px;padding:12px 13px;font:inherit;outline:none}input:focus,textarea:focus{border-color:var(--purple)}textarea{min-height:130px;resize:vertical}.form-message{color:#8de4bf;font-size:.9rem;min-height:1.5em}
+footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:.86rem}.footer-row{display:flex;align-items:center;justify-content:space-between;gap:20px}.footer-row strong{color:var(--text)}
+@media(max-width:900px){.hero-grid{gap:30px}.skills-grid{grid-template-columns:repeat(2,1fr)}.project-grid{grid-template-columns:repeat(2,1fr)}.project-card:last-child{grid-column:1/-1}.about-grid,.contact-grid{grid-template-columns:1fr}}
+@media(max-width:650px){.container{width:90%}.nav{height:68px}.menu{display:block}nav{display:none;position:absolute;top:68px;left:0;right:0;background:#12111d;padding:18px 5%;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:15px}nav.open{display:flex}.hero{padding:70px 0}.hero-grid{grid-template-columns:1fr}.profile-card{max-width:360px;margin:auto}.hero h1{font-size:3.2rem}.hero-grid{gap:38px}section{padding:65px 0}.skills-grid,.project-grid{grid-template-columns:1fr}.project-card:last-child{grid-column:auto}.certificate{grid-template-columns:auto 1fr}.certificate .btn{grid-column:1/-1}.footer-row{flex-direction:column;align-items:flex-start}.mini-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home">Areesha<span>.</span></a>
+    <button class="menu" id="menuButton" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav id="navigation">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow"><span class="dot"></span> Welcome to my portfolio</div>
+      <h1>Hi, I'm <span class="gradient">Areesha Aamir</span></h1>
+      <div class="subtitle">Software Engineering Student</div>
+      <p class="intro">I'm a Software Engineering student passionate about programming, Artificial Intelligence, web development and building creative digital projects.</p>
+      <div class="actions"><a class="btn btn-primary" href="#projects">Explore My Work ↗</a><a class="btn btn-ghost" href="#contact">Contact Me</a></div>
+      <div class="tech-strip"><span class="tech">Python</span><span class="tech">C++</span><span class="tech">SQL</span><span class="tech">AI</span><span class="tech">Web Development</span></div>
+    </div>
+    <div class="profile-card">
+      <div class="avatar" role="img" aria-label="A stylized initials illustration for Areesha Aamir"><span class="avatar-mark">AA</span></div>
+      <div class="profile-caption"><div><strong>Areesha Aamir</strong><small>BS Software Engineering · Indus University</small></div><span class="pill">Student Portfolio</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+ <div class="container">
+  <div class="section-head"><div class="kicker">Get to know me</div><h2>About Me</h2><p>A little about who I am and what inspires me.</p></div>
+  <div class="about-grid">
+   <div class="panel"><h3>My journey</h3><p>I'm currently pursuing BS Software Engineering at Indus University. I'm interested in programming, Artificial Intelligence, databases and web development. I enjoy learning new technologies and turning ideas into practical projects.</p><div class="interests"><span class="tag">Artificial Intelligence</span><span class="tag">Web Development</span><span class="tag">Programming</span><span class="tag">Software Engineering</span></div></div>
+   <div class="panel"><h3>Education &amp; skills</h3><div class="mini-grid"><div class="mini"><b>Education</b><span>BS Software Engineering</span></div><div class="mini"><b>University</b><span>Indus University</span></div><div class="mini"><b>Core skills</b><span>HTML, CSS, JavaScript</span></div><div class="mini"><b>Also learning</b><span>Python, C++, SQL</span></div></div></div>
+  </div>
+ </div>
+</section>
+
+<section id="skills">
+ <div class="container">
+  <div class="section-head"><div class="kicker">My toolkit</div><h2>Skills</h2><p>A growing toolkit from my coursework and personal projects — always learning, always improving.</p></div>
+  <div class="skills-grid">
+   <div class="skill-card"><div class="skill-icon">✦</div><h3>Frontend</h3><div class="skill-line"><span>HTML</span><span class="level">Intermediate</span></div><div class="skill-line"><span>CSS</span><span class="level">Intermediate</span></div><div class="skill-line"><span>JavaScript</span><span class="level">Intermediate</span></div></div>
+   <div class="skill-card"><div class="skill-icon">⌘</div><h3>Programming</h3><div class="skill-line"><span>Python</span><span class="level">Beginner</span></div><div class="skill-line"><span>C++</span><span class="level">Beginner</span></div></div>
+   <div class="skill-card"><div class="skill-icon">▤</div><h3>Data &amp; Databases</h3><div class="skill-line"><span>SQL</span><span class="level">Intermediate</span></div><div class="skill-line"><span>Database Design</span><span class="level">Beginner</span></div></div>
+   <div class="skill-card"><div class="skill-icon">◎</div><h3>Tools &amp; Concepts</h3><div class="skill-line"><span>GitHub</span><span class="level">Beginner</span></div><div class="skill-line"><span>Artificial Intelligence</span><span class="level">Beginner</span></div><div class="skill-line"><span>Software Engineering</span><span class="level">Beginner</span></div></div>
+  </div>
+ </div>
+</section>
+
+<section class="projects" id="projects">
+ <div class="container">
+  <div class="section-head"><div class="kicker">Selected work</div><h2>My Projects</h2><p>Academic and personal projects — each one taught me something new. These previews are illustrative mockups of the project interfaces.</p></div>
+  <div class="project-grid">
+   <article class="project-card">
+    <div class="preview"><div class="browser"><div class="browser-bar"><i></i><i></i><i></i></div><div class="mock-portfolio"><b>Areesha<span style="color:#ff75bb">.</span></b><div class="mock-title">Hi, I'm <span>Areesha</span></div><div>Software Engineering Student</div><span class="mock-button">Explore my work</span></div></div></div>
+    <div class="project-body"><div class="project-type">Web Development · Student Project</div><h3>Personal Portfolio Website</h3><p>A responsive personal portfolio website created to showcase my education, skills, projects and professional profile.</p><div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive Design</span></div><a class="project-link" href="#contact">View Project details ↗</a></div>
+   </article>
+   <article class="project-card">
+    <div class="preview"><div class="browser"><div class="browser-bar"><i></i><i></i><i></i></div><div class="mock-salon"><div class="salon-logo">Glow &amp; Grace</div><div class="salon-hero">Feel beautiful,<br>inside &amp; out<div style="font-size:.6rem;font-weight:500">Hair · Skin · Makeup · Bridal</div></div><div class="salon-cards"><span>Hair Styling<br><b>Rs 1,500</b></span><span>Facial<br><b>Rs 2,000</b></span><span>Makeup<br><b>Rs 3,500</b></span></div></div></div></div>
+    <div class="project-body"><div class="project-type">Web Development · Student Project</div><h3>Beauty Parlor Website</h3><p>A modern and user-friendly website project created for a beauty parlor, focusing on services, attractive design and easy navigation.</p><div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>UI Design</span></div><a class="project-link" href="#contact">View Project details ↗</a></div>
+   </article>
+   <article class="project-card">
+    <div class="preview"><div class="browser"><div class="browser-bar"><i></i><i></i><i></i></div><div class="mock-db"><div class="db-label">Students</div><div class="db-row"><b>student_id</b><b>name</b><b>dept_id</b></div><div class="db-row"><span>1</span><span>Ali Khan</span><span>101</span></div><div class="db-row"><span>2</span><span>Sara Ahmed</span><span>102</span></div><div class="db-code">SELECT s.name, d.dept_name<br>FROM Students s<br>JOIN Departments d;</div></div></div></div>
+    <div class="project-body"><div class="project-type">Database · Academic Project</div><h3>Database Management Project</h3><p>An academic database project demonstrating database design, tables, keys, relationships and SQL concepts.</p><div class="project-tags"><span>SQL</span><span>Database Design</span><span>ER Modeling</span></div><a class="project-link" href="#contact">View Project details ↗</a></div>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section id="certificates">
+ <div class="container">
+  <div class="section-head"><div class="kicker">Growth mindset</div><h2>Certificates &amp; Learning</h2><p>Courses and programs that shape my journey into Artificial Intelligence and software engineering.</p></div>
+  <div class="panel certificate"><div class="cert-icon">✧</div><div><h3>Artificial Intelligence Certificate</h3><p>Certificate earned through an AI learning program, reflecting my interest in Artificial Intelligence and emerging technologies.</p></div><span class="pill">AI Learning</span></div>
+ </div>
+</section>
+
+<section id="contact">
+ <div class="container">
+  <div class="section-head"><div class="kicker">Get in touch</div><h2>Let's Connect</h2><p>Have a project idea, collaboration opportunity or just want to connect? Feel free to reach out.</p></div>
+  <div class="contact-grid">
+   <div class="panel"><h3>Contact details</h3><div class="contact-item"><small>Email</small><span>ADD YOUR EMAIL HERE</span></div><div class="contact-item"><small>Education</small><span>Software Engineering Student · Indus University</span></div><div class="contact-item"><small>Find me online</small><div class="socials"><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram ↗</a></div></div></div>
+   <div class="panel"><h3>Send a message</h3><form id="contactForm"><div><label for="visitorName">Name</label><input id="visitorName" name="name" placeholder="Your name" required></div><div><label for="visitorEmail">Email</label><input id="visitorEmail" name="email" type="email" placeholder="you@example.com" required></div><div><label for="visitorMessage">Message</label><textarea id="visitorMessage" name="message" placeholder="Write your message..." required></textarea></div><button class="btn btn-primary" type="submit">Send Message ↗</button><p class="form-message" id="formMessage" aria-live="polite"></p></form></div>
+  </div>
+ </div>
+</section>
+</main>
+<footer><div class="container footer-row"><div><strong>Areesha Aamir</strong><br>Software Engineering Student · Indus University</div><div>© <span id="year"></span> Areesha Aamir. All rights reserved.</div></div></footer>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+const menuButton = document.getElementById('menuButton');
+const navigation = document.getElementById('navigation');
+menuButton.addEventListener('click', () => {
+  const isOpen = navigation.classList.toggle('open');
+  menuButton.setAttribute('aria-expanded', String(isOpen));
+  menuButton.textContent = isOpen ? '✕' : '☰';
+});
+navigation.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+  navigation.classList.remove('open');
+  menuButton.setAttribute('aria-expanded', 'false');
+  menuButton.textContent = '☰';
+}));
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  document.getElementById('formMessage').textContent =
+    'Thanks! This demo form does not send messages yet. Add an email or backend service to receive submissions.';
+  this.reset();
+});
+</script>
+</body>
+</html>
